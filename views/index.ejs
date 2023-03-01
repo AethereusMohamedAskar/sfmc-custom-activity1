@@ -1,0 +1,57 @@
+<link rel='stylesheet', href='/styles/salesforce-lightning-design-system.min.css'>
+<link rel='stylesheet', href='/styles/custom.css'>
+<script src="javascript/libs/jquery.min.js"></script>
+<Script src="javascript/libs/jquery.validate.min.js"></Script>
+<script src="javascript/libs/postmonger.js"></script>
+<script src="javascript/customActivity.js"></script>
+
+<article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-standard-account" title="Custom Activity">
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+            </svg>
+            <span class="slds-assistive-text">Custom Activity</span>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <a href="#" class="slds-card__header-link slds-truncate" title="Accounts">
+              <span>Custom Activity</span>
+            </a>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <div class="slds-card__body">
+       <form class="js-activity-setting">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="DropdownOptions">Type</label>
+  <div class="slds-form-element__control">
+    <div class="slds-select_container">
+      <select class="slds-select js-activity-setting " id="#DropdownOptions">
+        
+
+           
+
+            <% dropdownOptions.forEach(element => { %>
+              <option><%= element.name %></option>
+                
+          
+            <% }) %>
+          
+       
+      </select>
+      <label class="slds-form-element__label slds-p-top_medium" for="text">
+        <abbr class="slds-required" title="required">* </abbr>Input Label</label>
+      <div class="slds-form-element__control">
+        <input type="text" id="Text" placeholder="" required="" class="slds-input js-activity-setting" name="text" />
+    </div>
+  </div>
+
+       </form>
+        
+    </div>
+  </article>
