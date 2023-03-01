@@ -6,8 +6,8 @@ const httpErrors = require('http-errors');
 const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
-const routes = require('./routes/index');
-const activityRouter = require('./routes/activity');
+const routes = require('.api/routes/index');
+const activityRouter = require('.api/routes/activity');
 const ngrok = require('ngrok');
 
 //var cons = require('consolidate');
