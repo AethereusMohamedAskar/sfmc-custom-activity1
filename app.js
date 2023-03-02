@@ -8,7 +8,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const routes = require('./api/routes/index');
 const activityRouter = require('./api/routes/activity');
-const ngrok = require('ngrok');
+
 
 //var cons = require('consolidate');
 
@@ -70,14 +70,5 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-ngrok.connect({
-  proto : 'http',
-  addr : '3000',
-}, (err, url) => {
-  if (err) {
-      console.error('Error while connecting Ngrok',err);
-      return new Error('Ngrok Failed');
-  }
-});
 
 module.exports = app;
